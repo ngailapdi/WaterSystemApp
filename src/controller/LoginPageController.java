@@ -1,5 +1,7 @@
 package controller;
 
+import model.CurrentLoggedInUser;
+
 import fxapp.MainFXApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -26,6 +28,7 @@ public class LoginPageController {
     @FXML
     public void LoginRequest() {
         if (isInputValid()) {
+            CurrentLoggedInUser.getInstance().setUsername(username.getText());
             mainApplication.showMainAppPage();
         }
     }

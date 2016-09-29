@@ -4,6 +4,7 @@ import fxapp.MainFXApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import model.CurrentLoggedInUser;
 
 /**
  * Created by simkieu on 9/29/16.
@@ -17,7 +18,7 @@ public class MainAppPageController {
 
     public void setMainApp(MainFXApplication main) {
         mainApplication = main;
-        loggedUser.setText("user");
+        loggedUser.setText(CurrentLoggedInUser.getInstance().getUsername());
     }
 
     @FXML
