@@ -10,7 +10,8 @@
    <children>
       <Button layoutX="272.0" layoutY="187.0" mnemonicParsing="false" onAction="#LoginPressed"
               text="Login" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="267.0" layoutY="265.0" mnemonicParsing="false" text="Register" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="267.0" layoutY="265.0"
+              mnemonicParsing="false" text="Register" onAction="#RegisterPressed" />
       <Label alignment="CENTER" layoutX="227.0" layoutY="111.0" text="Welcome to Water System" />
    </children>
 </AnchorPane>

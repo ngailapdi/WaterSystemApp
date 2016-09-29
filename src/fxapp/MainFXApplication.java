@@ -27,6 +27,8 @@ public class MainFXApplication extends Application {
     /** the main layout for the main window */
     private AnchorPane rootLayout;
 
+    public Stage getMainScreen() { return mainScreen;}
+
     @Override
     public void start(Stage primaryStage) {
         mainScreen = primaryStage;

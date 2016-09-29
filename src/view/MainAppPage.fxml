@@ -10,7 +10,7 @@
             xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controller.MainAppPageController">
    <children>
       <Label layoutX="238.0" layoutY="83.0" text="Welcome to our app" />
-      <Label layoutX="517.0" layoutY="26.0" text="Label" />
+      <Label fx:id="loggedUser" layoutX="517.0" layoutY="26.0" text="Label" />
       <Button layoutX="271.0" layoutY="249.0" mnemonicParsing="false" text="Logout"
               onAction="#LogoutPressed" />
    </children>
