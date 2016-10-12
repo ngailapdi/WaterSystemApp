@@ -20,12 +20,6 @@ public class WelcomePageController {
 
     @FXML
     public void RegisterPressed() {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.initOwner(mainApplication.getMainScreen());
-        alert.setTitle("Unimplemented");
-        alert.setHeaderText("Unimplemented Feature");
-        alert.setContentText("Sorry, Register is not yet implemented!");
-
-        alert.showAndWait();
+        mainApplication.showRegisterPage();
     }
 }

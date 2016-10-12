@@ -1,6 +1,7 @@
 package fxapp;
 
 import controller.LoginPageController;
+import controller.RegisterPageController;
 import controller.WelcomePageController;
 import controller.MainAppPageController;
 
@@ -75,6 +76,33 @@ public class MainFXApplication extends Application {
 
             // Set the Main App title
             mainScreen.setTitle("Login Page");
+
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout);
+            mainScreen.setScene(scene);
+            mainScreen.show();
+
+
+        } catch (IOException e) {
+            //error on load, so log it
+            LOGGER.log(Level.SEVERE, "Failed to find the fxml file for MainScreen!!");
+            e.printStackTrace();
+        }
+    }
+
+    public void showRegisterPage() {
+        try {
+            // Load root layout from fxml file.i
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainFXApplication.class.getResource("../view/RegisterPage.fxml"));
+            rootLayout = loader.load();
+
+            // Give the controller access to the main app.
+            RegisterPageController controller = loader.getController();
+            controller.setMainApp(this);
+
+            // Set the Main App title
+            mainScreen.setTitle("Register Page");
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);

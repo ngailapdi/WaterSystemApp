@@ -27,6 +27,7 @@ public class LoginPageController {
 
     @FXML
     public void LoginRequest() {
+
         if (isInputValid()) {
             CurrentLoggedInUser.getInstance().setUsername(username.getText());
             mainApplication.showMainAppPage();
